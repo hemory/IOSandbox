@@ -1,0 +1,9 @@
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\bin\Debug\data.txt
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\bin\Debug\IOSandbox.exe.config
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\bin\Debug\IOSandbox.exe
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\bin\Debug\IOSandbox.pdb
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.csprojAssemblyReference.cache
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.csproj.CoreCompileInputs.cache
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.exe
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.pdb
+C:\Users\hphif\source\repos\IOSandbox\IOSandbox\bin\Debug\SoccerGameResults.csv
