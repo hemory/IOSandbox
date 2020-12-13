@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IOSandbox
 {
@@ -18,6 +15,21 @@ namespace IOSandbox
             var fileName = Path.Combine(directory.FullName, "SoccerGameResults.csv");
 
             var fileContents = ReadSoccerResults(fileName);
+
+            fileName = Path.Combine(directory.FullName, "players.json");
+
+            List<Player> players = DeserializePlayers(fileName);
+
+            List<Player> topTenPlayer = GetTopTenPlayer(players);
+
+            foreach (var player in topTenPlayer)
+            {
+                Console.WriteLine($"Name: {player.FirstName} PPG: {player.PointsPerGame}");
+            }
+
+            fileName = Path.Combine(directory.FullName, "topTen.json");
+
+            SerializePlayersToFile(players,fileName);
 
 
             Console.ReadLine();
@@ -78,7 +90,7 @@ namespace IOSandbox
                     }
 
                     double possessionPercent;
-                    if (double.TryParse(values[7], out possessionPercent ))
+                    if (double.TryParse(values[7], out possessionPercent))
                     {
                         gameResult.PossessionPercent = possessionPercent;
                     }
@@ -92,6 +104,57 @@ namespace IOSandbox
 
         }
 
+
+
+        // Turns the Json object into a player object using deserialization
+        public static List<Player> DeserializePlayers(string fileName)
+        {
+            List<Player> players = new List<Player>();
+
+            JsonSerializer serializer = new JsonSerializer();
+
+            using (StreamReader reader = new StreamReader(fileName))
+            using (JsonTextReader jsonReader = new JsonTextReader(reader))
+            {
+                players = serializer.Deserialize<List<Player>>(jsonReader);
+            }
+
+            return players;
+        }
+
+        public static List<Player> GetTopTenPlayer(List<Player> players)
+        {
+            List<Player> topTenPlayers = new List<Player>();
+
+            players.Sort(new PlayerComparer());
+            players.Reverse();
+
+
+            int counter = 0;
+
+            foreach (var player in players)
+            {
+                topTenPlayers.Add(player);
+                counter++;
+                if (counter == 10)
+                {
+                    break;
+                }
+            }
+            return topTenPlayers;
+
+        }
+
+        public static void SerializePlayersToFile(List<Player> players, string fileName)
+        {
+            JsonSerializer serializer = new JsonSerializer();
+
+            using (StreamWriter writer = new StreamWriter(fileName))
+            using (JsonTextWriter jsonWriter = new JsonTextWriter(writer))
+            {
+                serializer.Serialize(jsonWriter, players);
+            }
+        }
     }
 }
 
