@@ -7,3 +7,12 @@ C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.csproj.CoreC
 C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.exe
 C:\Users\hphif\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.pdb
 C:\Users\hphif\source\repos\IOSandbox\IOSandbox\bin\Debug\SoccerGameResults.csv
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\bin\Debug\SoccerGameResults.csv
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\bin\Debug\data.txt
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\bin\Debug\IOSandbox.exe.config
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\bin\Debug\IOSandbox.exe
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\bin\Debug\IOSandbox.pdb
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.csprojAssemblyReference.cache
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.csproj.CoreCompileInputs.cache
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.exe
+C:\Users\hphifer\source\repos\IOSandbox\IOSandbox\obj\Debug\IOSandbox.pdb
